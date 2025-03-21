@@ -6,13 +6,13 @@ import random
 #time.sleep(60)
 
 header = {
-    'authorization': 'MjgxOTgwOTU2NTA2NTg3MTM4.GLaDRg.CgBUOuVumnqFTAYlexq00mZvbHL1ZbJYAErxHw'
+    'authorization': '' # header goes here
 }
 
 def retrieveMessages(channel):
     fullMessages=[]
     headers = {
-        'authorization':"MjgxOTgwOTU2NTA2NTg3MTM4.GLaDRg.CgBUOuVumnqFTAYlexq00mZvbHL1ZbJYAErxHw"
+        'authorization':"" # header goes here
     }
     r = requests.get(f'https://discord.com/api/v9/channels/{channel}/messages', headers=headers)
     jsonn = json.loads(r.text)
